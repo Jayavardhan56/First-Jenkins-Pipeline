@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Install .NET 7 SDK') {
+            steps {
+                sh 'curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 7.0'
+            }
+        }
+
+        stage('Install Docker Engine CE') {
+            steps {
+                sh '''
+                    curl -fsSL https://get.docker.com -o get-docker.sh
+                    sh get-docker.sh
+                    # systemctl start docker  <-- removed
+                    # systemctl enable docker <-- removed
+                    # systemctl is-active docker <-- removed
+                    docker --version
+                '''
+            }
+        }
+
+        stage('Start Docker Daemon Manually (if needed)') {
+            steps {
+                script {
+                    def dockerStatus = sh(script: 'docker info > /dev/null 2>&1 && echo "running" || echo "notrunning"', returnStdout: true).trim()
+                    if (dockerStatus == "notrunning") {
+                        sh 'dockerd & sleep 10'  // Start docker daemon in background, wait 10 sec for startup
+                    }
+                }
+            }
+        }
+
+        stage('Add Jenkins User to Docker Group') {
+            steps {
+                sh '''
+                    apt-get update
+                    usermod -aG docker jenkins
+                    # No systemctl restart docker needed here
+                '''
+            }
+        }
+    }
+}
