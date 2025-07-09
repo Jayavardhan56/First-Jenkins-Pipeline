@@ -2,13 +2,13 @@
 
 This project contains a Jenkins declarative pipeline that automates the setup of
 
-.NET 7 SDK
+1) .NET 7 SDK
 
-Docker Engine Community Edition (CE)
+2) Docker Engine Community Edition (CE)
 
-Docker daemon handling (manual start if not running)
+3) Docker daemon handling (manual start if not running)
 
-User permission setup for Jenkins to access Docker
+4) User permission setup for Jenkins to access Docker
 
 📜 Pipeline Overview
 The pipeline executes the following stages:
