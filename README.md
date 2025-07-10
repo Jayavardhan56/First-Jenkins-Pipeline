@@ -48,6 +48,7 @@ The Jenkins agent is running on a Debian-based Linux system.
 
 After adding Jenkins to the Docker group, you may need to restart the Jenkins agent for group changes to apply (not done within the pipeline).
 
+This helped me to learn basics of Jenkins Pipeline and how to automate things using the devops principles
 🧪 Use Case
 Ideal for CI/CD workflows that require:
 
