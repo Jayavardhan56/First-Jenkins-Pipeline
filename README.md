@@ -51,6 +51,8 @@ After adding Jenkins to the Docker group, you may need to restart the Jenkins ag
 This helped me to learn basics of Jenkins Pipeline and how to automate things using the devops principles.
 
 Jenkins helps us to reduce the time of project upto 40%.
+
+Modern tool used for automation.
 🧪 Use Case
 Ideal for CI/CD workflows that require:
 
