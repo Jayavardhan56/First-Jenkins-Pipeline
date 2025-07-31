@@ -11,9 +11,11 @@ This project contains a Jenkins declarative pipeline that automates the setup of
 4) User permission setup for Jenkins to access Docker
 
 📜 Pipeline Overview
+
 The pipeline executes the following stages:
 
 1️⃣ Install .NET 7 SDK
+
 Uses the official Microsoft script to install the latest .NET 7 SDK.
 
 curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 7.0
