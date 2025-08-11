@@ -21,6 +21,7 @@ Uses the official Microsoft script to install the latest .NET 7 SDK.
 curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 7.0
 
 2️⃣ Install Docker Engine CE
+
 Installs Docker Engine Community Edition using Docker's recommended installation script.
 
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -28,6 +29,7 @@ sh get-docker.sh
 docker --version
 
 3️⃣ Start Docker Daemon (If Not Running)
+
 Checks whether the Docker daemon is active. If not, it manually starts dockerd in the background.
 
 dockerd & sleep 10
