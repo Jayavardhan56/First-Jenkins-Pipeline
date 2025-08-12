@@ -63,3 +63,5 @@ Ideal for CI/CD workflows that require:
 Building and publishing .NET 7 applications
 
 Running Docker containers as part of the build/test/deploy pipeline
+
+Feel Free to Make Forks and Pull Requests
