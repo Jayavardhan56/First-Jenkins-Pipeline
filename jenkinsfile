@@ -38,7 +38,7 @@ pipeline {
                     apt-get update
                     usermod -aG docker jenkins
                     # No systemctl restart docker needed here
-                '''
+                ''
             }
         }
     }
