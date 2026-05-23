@@ -65,3 +65,5 @@ Building and publishing .NET 7 applications
 Running Docker containers as part of the build/test/deploy pipeline
 
 Feel Free to Make Forks and Pull Requests
+
+You can also improvise this by creative commits 
